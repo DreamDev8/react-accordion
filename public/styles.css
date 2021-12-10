@@ -1,0 +1,129 @@
+/***************** VARIABLES ******************/
+
+:root {
+    --clr-purple: #4b145b;
+    --clr-red: #b4345c;
+    --clr-grey: hsl(210, 22%, 49%);
+    --clr-grey-darker: hsl(209, 28%, 39%);
+    --clr-white: #fff;
+    --clr-black: #222;
+    --clr-grey-lighter: #eae6eb;
+}
+
+/***************** GLOBALS ******************/
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--clr-purple);
+    line-height: 1.5;
+    letter-spacing: 0.05625;
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 1.3125rem;
+    margin-bottom: 1.875rem;
+}
+
+/***************** ACCORDION ******************/
+
+main {
+    min-height: 98vh;
+    display: grid;
+    place-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 38.75rem;
+}
+
+.container-all {
+    background-color: var(--clr-white);
+    border: 0.0625rem solid transparent;
+    border-radius: 0.25rem;
+    padding: 2.8125rem;
+    margin: 5rem auto;
+}
+
+.accordion-container {
+    border: 0.125rem solid var(--clr-grey-lighter);
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-right: 0.625rem;
+    font-weight: 600;
+    max-width: 8.125rem;
+}
+
+.info {
+    color: var(--clr-grey-darker);
+    font-size: 1rem;
+    margin: 0.9375rem 1.5625rem;
+}
+
+.question-cta {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.9375rem 1.5625rem;
+}
+
+.cta {
+    background-color: var(--clr-grey-lighter);
+    height: 2.5em;
+    width: 2.5em;
+    color: var(--clr-red);
+    border: transparent;
+    border-radius: 3.125rem;
+}
+
+footer {
+    position: sticky;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.footer-h3 {
+    font-size: 0.625rem;
+    color: var(--clr-darker-grey);
+}
+
+@media screen and (min-width: 48em) {
+    main {
+        max-width: 56.25rem;
+    }
+
+    h1 {
+        font-size: 1.625rem;
+    }
+
+    h2 {
+        min-width: 16.875rem;
+    }
+
+    .container-all {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 0.625rem;
+    }
+
+    .heading {
+        margin-right: 0.9375rem;
+    }
+}
